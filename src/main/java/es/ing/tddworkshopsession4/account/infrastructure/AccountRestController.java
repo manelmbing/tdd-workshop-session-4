@@ -1,5 +1,6 @@
-package es.ing.tddworkshopsession4.account;
+package es.ing.tddworkshopsession4.account.infrastructure;
 
+import es.ing.tddworkshopsession4.account.domain.Account;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

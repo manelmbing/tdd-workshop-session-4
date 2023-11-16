@@ -1,4 +1,4 @@
-package es.ing.tddworkshopsession4.account;
+package es.ing.tddworkshopsession4.account.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

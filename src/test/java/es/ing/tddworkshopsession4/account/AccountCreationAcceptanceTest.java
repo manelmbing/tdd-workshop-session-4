@@ -1,6 +1,7 @@
 package es.ing.tddworkshopsession4.account;
 
 import es.ing.tddworkshopsession4.TddWorkshopSession4Application;
+import es.ing.tddworkshopsession4.account.domain.Account;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
