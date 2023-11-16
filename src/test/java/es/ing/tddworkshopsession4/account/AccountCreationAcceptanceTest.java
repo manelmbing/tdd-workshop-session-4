@@ -14,6 +14,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -35,5 +36,15 @@ class AccountCreationAcceptanceTest {
         ResponseEntity<Account> result = this.restTemplate.postForEntity(baseUrl, account, Account.class);
 
         assertEquals(HttpStatus.BAD_REQUEST, result.getStatusCode());
+    }
+
+    @Test
+    void shouldReturnCreatedResponseIfRequestHasOneClient() {
+        final String baseUrl = "http://localhost:" + randomServerPort + "/accounts";
+        Account account = new Account(List.of("1"), BigDecimal.ZERO);
+
+        ResponseEntity<Account> result = this.restTemplate.postForEntity(baseUrl, account, Account.class);
+
+        assertEquals(HttpStatus.CREATED, result.getStatusCode());
     }
 }
