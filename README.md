@@ -1,7 +1,7 @@
 # London School of TDD
 
 1. A qué llamamos la Escuela de Londres
-    * Es el estilo de TDD planteado por **Steve Freeman** y **Nat Pryce** en su libro _Growing Object-Oriented Software Guided by tests (prólogo por... **Kent Beck**).
+    * Es el estilo de TDD planteado por **Steve Freeman** y **Nat Pryce** en su libro _Growing Object-Oriented Software Guided by tests_ (prólogo por... **Kent Beck**).
     * También se conoce esta estrategia como **Mockist TDD**, **Outside In** o **Top Down**.
     * No hay enfrentamiento entre Londres y Chicago, en realidad la escuela de Londres añade valor a la escuela de Chicago.
     * Pone el foco en probar la relación entre los elementos clave del proyecto y sus mensajes, **las interacciones**.  
@@ -10,10 +10,10 @@
 2. En qué consiste esta estratégia
     * Se aconseja empezar a probar el comportamiento mediante tests de tipo aceptación al estilo del BDD en nuestra capa **superior/exterior**.
     * Este estilo está muy relacionado con ATDD, se usa un ciclo de TDD con tests de aceptación que contiene otro ciclo de TDD de tests unitarios.
-    * No se recomienda el uso de mocks con código de terceros, lo ideal es crear una abstracción para hacer más manejable esa "_frontera_".
     * La recomendación de trabajar con mocks y abstracciones para controlar las relaciones lo hace ideal para trabajar con **arquitectura hexagonal**.
-    * La regla de oro es poner el foco en las abstracciones que representan las interacciones, intentando limitar las dependencias de estas.
-     > Si para hacer un test ves que estás usando muchos mocks es que algo está mal en tu diseño.
+    * No se recomienda el uso de mocks con código de terceros, lo ideal es crear una abstracción para hacer más manejable esa "_frontera_".
+    * Es importante poner el foco en las abstracciones que representan las interacciones, intentando limitar las dependencias de estas. 
+      * Si para hacer un test ves que estás usando muchos mocks es que algo está mal en tu diseño.
     * Si se hace bien, deberíamos tener muchos tests unitarios con alguna interfaz mockeada, y unos pocos tests de aceptación con las implementaciones reales.
 3. Ventajas
     * Este enfoque en el uso de mocks nos permite **poder trabajar sin tener las versiones reales implementadas** o completamente definidas. 

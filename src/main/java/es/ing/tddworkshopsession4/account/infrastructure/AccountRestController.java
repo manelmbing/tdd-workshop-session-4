@@ -19,7 +19,7 @@ public class AccountRestController {
             return ResponseEntity.badRequest().build();
         }
 
-        AccountRestCreationService accountRestCreationService = new AccountRestCreationService();
+        AccountRestCreationService accountRestCreationService = new AccountRestCreationService(new FakeAccountRepositoryImpl());
         Account response = accountRestCreationService.create(account);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(response).toUri();
         return ResponseEntity.created(uri).build();
