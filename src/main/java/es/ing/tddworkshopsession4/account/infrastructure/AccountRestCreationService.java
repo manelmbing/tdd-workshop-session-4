@@ -6,6 +6,9 @@ import java.security.InvalidParameterException;
 
 public class AccountRestCreationService implements AccountCreationService {
     public Account create(Account account) {
-        throw new InvalidParameterException();
+        if (account.getClients().isEmpty()) {
+            throw new InvalidParameterException();
+        }
+        return account;
     }
 }
