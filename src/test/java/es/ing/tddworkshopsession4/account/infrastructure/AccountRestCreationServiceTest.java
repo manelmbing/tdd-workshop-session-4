@@ -1,6 +1,5 @@
 package es.ing.tddworkshopsession4.account.infrastructure;
 
-import ch.qos.logback.core.joran.util.beans.BeanDescriptionFactory;
 import es.ing.tddworkshopsession4.account.domain.Account;
 import org.junit.jupiter.api.Test;
 
@@ -10,13 +9,13 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class RestAccountCreationServiceTest {
+class AccountRestCreationServiceTest {
 
     @Test
     void shouldReturnErrorIfAccountHasNoClient() {
         Account account = new Account(new ArrayList<>(), BigDecimal.ZERO);
-        RestAccountCreationService restAccountCreationService = new RestAccountCreationService();
+        AccountRestCreationService accountRestCreationService = new AccountRestCreationService();
 
-        assertThrows(InvalidParameterException.class, () -> restAccountCreationService.create(account));
+        assertThrows(InvalidParameterException.class, () -> accountRestCreationService.create(account));
     }
 }
